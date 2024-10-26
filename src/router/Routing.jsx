@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom'; // Cambia a HashRouter
 import { PublicLayout } from '../components/layout/public/PublicLayout';
 import { PrivateLayout } from '../components/layout/private/PrivateLayout';
 import { Login } from '../components/user/Login';
@@ -14,18 +14,18 @@ import { Followers } from '../components/follow/Followers';
 
 export const Routing = () => {
   return (
-    <BrowserRouter>
+    <HashRouter> {/* Cambia BrowserRouter a HashRouter */}
       <AuthProvider>
         <Routes>
           {/* Cargamos los componentes de la ruta pública en rutas anidadas*/}
-          <Route path="/" element={<PublicLayout />}>
+          <Route path="/" element={<PublicLayout />} >
             <Route index element={<Login />} />
             <Route path='login' element={<Login />} />
             <Route path='registro' element={<Register />} />
           </Route>
 
           {/* Cargamos los componentes de la ruta privada  en rutas anidadas*/}
-          <Route path="/rsocial" element={<PrivateLayout />}>
+          <Route path="/rsocial" element={<PrivateLayout />} >
             <Route index element={<Feed />} />
             <Route path='feed' element={<Feed />} />
             <Route path='gente' element={<People />} />
@@ -37,9 +37,8 @@ export const Routing = () => {
 
           {/* Configuramos la ruta para el error 404 */}
           <Route path="*" element={<Error404 />} />
-
         </Routes>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
