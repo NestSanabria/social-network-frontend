@@ -1,0 +1,120 @@
+/* ESTILOS DE PEOPLE */
+.people__header {
+    margin-bottom: 1.5rem;
+}
+
+.people__title {
+    font-size: 2.5rem; /* Tamaño del título más grande */
+    color: #333;
+}
+
+.people__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.people__card {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex; /* Flexbox para organizar los elementos */
+}
+
+.people__container {
+    padding: 1rem;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    width: 100%;
+}
+
+.people__image {
+    flex-shrink: 0; /* Evita que la imagen se reduzca */
+    margin-right: 1rem;
+}
+
+.people__avatar {
+    width: 70px; /* Tamaño fijo para el avatar */
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #ccc; /* Borde alrededor de la imagen */
+}
+
+.people__avatar-img {
+    width: 100%;
+    height: auto;
+}
+
+.people__info {
+    flex-grow: 1; /* Permite que este contenedor ocupe el espacio restante */
+    display: flex;
+    flex-direction: column; /* Organiza nombre y biografía en columna */
+}
+
+.people__user-info {
+    flex-grow: 1;
+}
+
+.people__name {
+    color: #1f3a68;
+    font-weight: bold;
+    font-size: 2rem; /* Aumentado para mejor legibilidad */
+    margin-bottom: 0.5rem; /* Espacio entre el nombre y la biografía */
+}
+
+.people__bio {
+    color: #555;
+    font-size: 1.7rem; /* Aumentado para mejor legibilidad */
+}
+
+.people__buttons {
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+    align-items: center; /* Centra verticalmente los botones */
+}
+
+.people__button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.people__button--follow {
+    background-color: #28a745; /* Color verde para seguir */
+}
+
+.people__button:hover {
+    background-color: #0056b3;
+}
+
+.people__button--follow:hover {
+    background-color: #218838;
+}
+
+.people__load-more {
+    display: flex;
+    justify-content: center; /* Centra el botón */
+    margin-top: 1rem;
+}
+
+.people__button-load {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.people__button-load:hover {
+    background-color: #0056b3;
+}

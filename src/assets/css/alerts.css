@@ -1,0 +1,21 @@
+
+/* ESTILOS DE ALERTAS */
+.alert {
+    width: 50%;
+    display: block;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+}
+
+.alert-success {
+    background-color: #5cb85c;
+    border: 1px solid #0c8e0c;
+    color: white;
+}
+
+.alert-danger {
+    background-color: #f74c47;
+    border: 1px solid #ff192c;
+    color: white;
+}

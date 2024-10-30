@@ -1,0 +1,78 @@
+/* Establece un modelo de caja consistente para todos los elementos */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Incluye padding y bordes en el tamaño total */
+}
+
+/* Reinicia el padding para listas */
+ul,
+ol {
+    padding: 0; /* Elimina el padding por defecto en listas */
+}
+
+/* Elimina márgenes por defecto en varios elementos para un diseño más limpio */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0; /* Establece márgenes en cero para controlar el espaciado */
+}
+
+/* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
+body {
+    min-height: 100vh; /* Altura mínima del cuerpo para llenar la ventana */
+    scroll-behavior: smooth; /* Suaviza el desplazamiento al anclar */
+    text-rendering: optimizeSpeed; /* Mejora la velocidad de renderizado */
+    line-height: 1.5; /* Espaciado entre líneas para mejorar la legibilidad */
+}
+
+/* Elimina el estilo de lista en listas con clase */
+ul[class],
+ol[class] {
+    list-style: none; /* Quita los puntos o números de las listas */
+}
+
+/* Mejora la accesibilidad eliminando el subrayado en enlaces no clasificados */
+a:not([class]) {
+    text-decoration-skip-ink: auto; /* Elimina el subrayado para enlaces sin clase */
+}
+
+/* Asegura que las imágenes sean responsivas */
+img {
+    max-width: 100%; /* Limita el ancho máximo al 100% del contenedor */
+    display: block; /* Elimina el espacio en la parte inferior de las imágenes */
+}
+
+/* Agrega espacio entre elementos de bloque */
+article > * + * {
+    margin-top: 1em; /* Añade margen superior entre elementos consecutivos */
+}
+
+/* Asegura que los formularios hereden el estilo de fuente del cuerpo */
+input,
+button,
+textarea,
+select {
+    font: inherit; /* Hereda el estilo de fuente del elemento padre */
+}
+
+/* Media query para usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: .01ms !important; /* Elimina animaciones para reducir movimiento */
+        animation-iteration-count: 1 !important; /* Limita el número de repeticiones de animaciones */
+        transition-duration: .01ms !important; /* Reduce la duración de las transiciones */
+        scroll-behavior: auto !important; /* Desactiva el desplazamiento suave */
+    }
+}

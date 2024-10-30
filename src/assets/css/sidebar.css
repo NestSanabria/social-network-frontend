@@ -1,0 +1,100 @@
+/* ESTILOS DEL SIDEBAR */
+.layout__aside {
+    grid-area: aside; /* Esto asegura que el sidebar esté en su área designada */
+    margin-right: 2rem; /* Espacio entre el contenido y el sidebar */
+    background-color: #ffffff; /* Color de fondo */
+    padding: 1rem; /* Padding interno */
+    border-radius: 0.4rem; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.aside__header {
+    margin-bottom: 1.5rem; /* Espacio debajo del encabezado */
+}
+
+.aside__title {
+    font-size: 2rem; /* Tamaño del título */
+    color: #333; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+}
+
+.aside__container {
+    width: 100%;
+}
+
+.aside__profile-info {
+    border: 1px solid #ddd; /* Color del borde */
+    padding: 2rem; /* Padding interno */
+    margin-bottom: 2rem; /* Espacio debajo del perfil */
+    border-radius: 0.4rem; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo blanco para el perfil */
+}
+
+.profile-info__general-info {
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+}
+
+.general-info__container-avatar {
+    width: 80px; /* Tamaño del avatar */
+    height: 80px;
+    border-radius: 50%; /* Hacer el avatar circular */
+    margin-right: 1rem; /* Espacio a la derecha del avatar */
+    overflow: hidden; /* Esconde el desbordamiento */
+}
+
+.container-avatar__img {
+    width: 100%; /* Ocupa todo el contenedor */
+    height: auto; /* Mantener la proporción */
+}
+
+.general-info__container-names {
+    flex-grow: 1; /* Ocupar el espacio restante */
+}
+
+.container-names__name {
+    color: #1f3a68; /* Color del nombre */
+    font-size: 1.6rem; /* Tamaño del nombre */
+    font-weight: bold; /* Negrita para el nombre */
+}
+
+.container-names__nickname {
+    color: #969393; /* Color del apodo */
+    font-size: 1.4rem; /* Tamaño del apodo */
+}
+
+.profile-info__stats {
+    display: flex; /* Usar flexbox para las estadísticas */
+    justify-content: space-around; /* Espaciado uniforme */
+    margin-top: 1rem; /* Espacio arriba */
+    border-top: 1px solid #eee; /* Línea de separación */
+    padding-top: 1rem; /* Espacio en la parte superior */
+}
+
+.stats__following {
+    text-align: center; /* Centrar el texto */
+}
+
+.following__title {
+    display: block; /* Mostrar en bloque */
+    font-weight: bold; /* Negrita */
+    color: #555; /* Color del texto */
+    font-size: 1.2rem; /* Tamaño del título */
+}
+
+.following__number {
+    font-weight: bold; /* Negrita */
+    color: green; /* Color del número */
+    font-size: 1.5rem; /* Tamaño del número */
+}
+
+.following__link:hover > .following__number {
+    color: #1756cc; /* Color en hover */
+}
+
+.aside__container-form {
+    border: 1px solid #ddd; /* Color del borde */
+    padding: 2rem; /* Padding interno */
+    border-radius: 0.4rem; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco */
+}

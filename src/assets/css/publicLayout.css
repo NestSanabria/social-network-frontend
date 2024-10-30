@@ -1,0 +1,123 @@
+/* src/assets/css/publicLayout.css */
+/* ESTILOS DE LAYOUT PRIVADO */
+.public__layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar elementos horizontalmente */
+    justify-content: center; /* Centrar verticalmente dentro de su área */
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    background-color: #f9f9f9; /* Cambia esto según sea necesario */
+    padding: 1rem; /* Espaciado interno si es necesario */
+    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.public__layout-content {
+    flex: 1; /* Permite que este contenedor ocupe el espacio restante */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+
+
+/* Contenedor del formulario de autenticación */
+.public__auth-form-container {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white; 
+}
+
+/* Título del formulario */
+.public__auth-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px; /* Tamaño de fuente ajustable */
+}
+
+/* Contenedor para alertas */
+.public__auth-alert-container {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Estilo para las alertas */
+.public__auth-alert {
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Estilo para alertas de éxito */
+.public__auth-alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+/* Estilo para alertas de error */
+.public__auth-alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+/* Estilo para grupos de formularios */
+.public__auth-form-group {
+    margin-bottom: 15px;
+}
+
+/* Etiquetas de formularios */
+.public__auth-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Campos de entrada */
+.public__auth-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.public__auth-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Botón de envío */
+.public__auth-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745; /* Color verde para el botón */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.public__auth-btn:hover {
+    background-color: #218838; /* Color más oscuro al pasar el mouse */
+}
+
+/* Contenedor para enlaces */
+.public__auth-link-container {
+    text-align: center;
+    margin-top: 15px; /* Espacio ajustable */
+}
+
+.public__auth-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.public__auth-link:hover {
+    text-decoration: underline;
+}

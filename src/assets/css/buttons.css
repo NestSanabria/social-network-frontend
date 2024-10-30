@@ -1,0 +1,77 @@
+/* ESTILOS DE BOTONES */
+
+/* Estilos generales para los botones de éxito */
+.content__button,
+.content__btn-more-post {
+    background-color: #5cb85c; /* Color de fondo para botones de éxito */
+    color: white; /* Color del texto en el botón */
+    padding: 0.5rem 1rem; /* Espaciado interno del botón */
+    border: 1px solid #4cae4c; /* Color del borde para botones de éxito */
+    border-radius: 0.3rem; /* Bordes redondeados */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de línea para mejorar la legibilidad */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Efecto hover para botones de éxito */
+.content__button:hover,
+.content__btn-more-post:hover {
+    background-color: #449d44; /* Color de fondo al pasar el cursor */
+    border-color: #398439; /* Color del borde al pasar el cursor */
+}
+
+/* Estilos para el botón de eliminar publicación */
+.post__button {
+    color: white; /* Color del texto en el botón de eliminar */
+    padding: 1rem 1.5rem; /* Espaciado interno del botón de eliminar */
+    font-size: 1.4rem; /* Tamaño de fuente */
+    border-radius: 0.4rem; /* Bordes redondeados */
+    background-color: #d9534f; /* Color de fondo para el botón de eliminar */
+    border-color: #d43f3a; /* Color del borde para el botón de eliminar */
+}
+
+/* Estilo para botón de éxito en publicaciones */
+.post__button--green {
+    background-color: #5cb85c; /* Color de fondo para botón de éxito */
+    border-color: #4cae4c; /* Color del borde para botón de éxito */
+}
+
+/* Efecto hover para el botón de éxito */
+.post__button.post__button--green:hover {
+    background-color: #449d44; /* Color de fondo al pasar el cursor */
+    border-color: #398439; /* Color del borde al pasar el cursor */
+}
+
+/* Efecto hover para el botón de eliminar */
+.post__button:hover {
+    background-color: #c9302c; /* Color de fondo al pasar el cursor */
+    border-color: #ac2925; /* Color del borde al pasar el cursor */
+}
+
+/* Contenedor para agrupar botones */
+.post__buttons {
+    display: flex; /* Usa flexbox para alinear botones */
+    align-items: center; /* Centra verticalmente los botones */
+}
+
+/* Contenedor para el botón "Ver más publicaciones" */
+.content__container-btn {
+    width: 100%;
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra el botón horizontalmente */
+    margin-top: 1rem; /* Espacio arriba del contenedor */
+}
+
+.btn-delete {
+    background-color: #ff4d4d; /* Color rojo suave para el botón de eliminar */
+    color: white; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 8px 16px; /* Espacio interno */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave al pasar el cursor */
+}
+
+.btn-delete:hover {
+    background-color: #ff1a1a; /* Color más oscuro al pasar el cursor */
+}
