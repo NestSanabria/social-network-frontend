@@ -1,19 +1,38 @@
-// src/components/layout/private/NavPriv.jsx
 import { NavLink } from 'react-router-dom';
 import avatar from '../../../assets/img/user.png';
 import { Global } from '../../../helpers/Global';
 import useAuth from '../../../hooks/useAuth';
+import { useState } from 'react';
+import logo from "../../../assets/img/logo.png"
 
 export const NavPriv = () => {
-
-  // Usamos el hook Auth para tener disponible el objeto del usuario identificado.
   const { auth } = useAuth();
+  
+  // Estado para manejar la visibilidad del menú en pantallas pequeñas
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Función para alternar la visibilidad del menú
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <nav className="navbar__container-lists">
+    <nav className="layout__navbar">
+      {/* Logo de la barra de navegación */}
+      <div className="navbar__title">
+        <img src={logo} className="logo" alt="brand" /> {/* Logo de la aplicación */}
+      </div>
 
-      <ul className="container-lists__menu-list">
+      {/* Botón hamburguesa (solo visible en pantallas pequeñas) */}
+      <button className="navbar-toggler" onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      {/* Lista de enlaces de navegación (se muestra solo cuando isMenuOpen es true) */}
+      <ul className={`container-lists__menu-list ${isMenuOpen ? 'show' : ''}`}>
+        {/* Enlaces de la parte izquierda */}
         <li className="menu-list__item">
           <NavLink to="/rsocial" className="menu-list__link">
             <i className="fa-solid fa-house"></i>
@@ -41,37 +60,36 @@ export const NavPriv = () => {
             <span className="menu-list__title">Usuarios</span>
           </NavLink>
         </li>
-      </ul>
 
-      <ul className="container-lists__list-end">
-        <li className="list-end__item">
+        {/* Enlaces de la parte derecha (usuario, ajustes, cerrar sesión) */}
+        <li className="menu-list__item">
+          <NavLink to={`/rsocial/mis-publicaciones/${auth._id}`} className="menu-list__link">
+            <span className="menu-list__name">{auth.nick}</span>
+          </NavLink>
+        </li>
+
+        <li className="menu-list__item">
+          <NavLink to="/rsocial/ajustes" className="menu-list__link">
+            <i className="fa-solid fa-gear"></i>
+            <span className="menu-list__name"> Ajustes</span>
+          </NavLink>
+        </li>
+
+        <li className="menu-list__item">
+          <NavLink to="/rsocial/logout" className="menu-list__link">
+            <i className="fa-solid fa-arrow-right-from-bracket"></i>
+            <span className="menu-list__name"> Cerrar sesión</span>
+          </NavLink>
+        </li>
+
+        {/* Avatar */}
+        <li className="menu-list__item">
           <div className="img-avatar-nav">
-            {auth.image != "default.png" && <img src={Global.url + "user/avatar/" + auth.image} className="container-avatar__img" alt="Foto de perfil" />}
-            {auth.image == "default.png" && <img src={avatar} className="container-avatar__img" alt="Foto de perfil" />}
+            {auth.image !== "default.png" && <img src={Global.url + "user/avatar/" + auth.image} className="container-avatar__img" alt="Foto de perfil" />}
+            {auth.image === "default.png" && <img src={avatar} className="container-avatar__img" alt="Foto de perfil" />}
           </div>
         </li>
-
-        <li className="list-end__item">
-          <NavLink to={`/rsocial/mis-publicaciones/${auth._id}`} className="list-end__link">
-          <span className="list-end__name">{auth.nick}</span>
-          </NavLink>
-        </li>
-
-        <li className="list-end__item">
-          <NavLink to="/rsocial/ajustes" className="list-end__link">
-          <i className="fa-solid fa-gear"></i>
-            <span className="list-end__name">Ajustes</span>
-          </NavLink>
-        </li>
-
-        <li className="list-end__item">
-          <NavLink to="/rsocial/logout" className="list-end__link">
-          <i className="fa-solid fa-arrow-right-from-bracket"></i>
-            <span className="list-end__name">Cerrar sesión</span>
-          </NavLink>
-        </li>
       </ul>
-
     </nav>
-  )
-}
+  );
+};

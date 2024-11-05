@@ -1,0 +1,118 @@
+/* --------- */
+/* NavPriv Section  */
+/* --------- */
+
+/* Logo de la barra de navegación */
+.navbar__logo {
+flex: 1;
+display: flex;
+justify-content: center; /* Centrado horizontal */
+}
+
+.logo {
+width: 50px; /* Tamanho fijo del logo */
+height: auto; /* Para mantener la proporción */
+object-fit: contain;  /* Mantener la proporción del logo sin deformarlo */
+}
+  
+
+/* ===================== */
+/* Estilos del botón hamburguesa */
+.navbar-toggler {
+display: none;
+flex-direction: column;
+background-color: transparent;
+border: none;
+padding: 0;
+cursor: pointer;
+}
+
+.navbar-toggler span {
+display: block;
+width: 25px;
+height: 3px;
+background-color: #fff;
+margin: 4px auto;
+}
+
+/* ===================== */
+/* Estilos para los enlaces del menú */
+.container-lists__menu-list {
+display: flex;
+flex-direction: row;
+align-items: center;
+margin-left: auto;
+list-style: none;
+}
+
+.menu-list__link {
+padding: 1.8rem;
+transition: background-color 0.3s ease, transform 0.2s;
+border-radius: 0.5rem;
+color: white;
+}
+
+.menu-list__link:hover {
+background-color: #1756cc;
+transform: scale(1.05);
+}
+
+/* Color al enfocar el enlace */
+.menu-list__link:focus {
+    outline: none; /* Eliminar el borde por defecto al enfocar */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo ligeramente translúcido al enfocar */
+    color: #e0e0e0; /* Color del texto al enfocar */
+}
+
+.menu-list__title {
+    padding: 0.5rem;
+    font-size: 1.6rem; /* Tamaño de fuente más grande para los títulos */
+}
+
+/* ESTILOS DE LA LISTA FINAL */
+.container-lists__list-end {
+    display: flex;
+    align-items: center;
+}
+
+.list-end__item:first-child {
+    padding: 0.6rem;
+}
+
+/* ESTILOS DE IMÁGENES DEL AVATAR */
+.list-end__img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%; /* Hacer la imagen circular */
+    border: 2px solid white; /* Borde blanco para destacar el avatar */
+}
+
+
+.img-avatar-nav {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    overflow: hidden;
+}
+
+/* ESTILOS DE ENLACES EN LA LISTA FINAL */
+.list-end__link {
+    padding: 1.8rem;
+    transition: background-color 0.3s ease; /* Transiciones suaves */
+    color: #fff; /* Color del texto por defecto */
+}
+
+/* Color de fondo al pasar el mouse */
+.list-end__link:hover {
+    background-color: #1756cc; /* Mismo color de fondo al pasar el mouse */
+}
+
+
+/* Color al enfocar el enlace */
+.list-end__link:focus {
+    outline: none; /* Eliminar el borde por defecto al enfocar */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo ligeramente translúcido al enfocar */
+    color: #e0e0e0; /* Color del texto al enfocar */
+}
+

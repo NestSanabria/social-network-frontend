@@ -1,6 +1,6 @@
 # Red Social Básica - Frontend
 
-Bienvenido a la Red Social Básica, un proyecto diseñado para facilitar la interacción y conexión entre usuarios en un entorno social en línea. Este backend ofrece una serie de características clave para gestionar la experiencia del usuario:
+Bienvenido a la Red Social Básica, un proyecto diseñado para facilitar la interacción y conexión entre usuarios en un entorno social en línea. Este frontend ofrece una serie de características clave para gestionar la experiencia del usuario:
 
 ## Características
 

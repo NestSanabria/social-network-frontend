@@ -43,84 +43,50 @@
 }
 
 
+/* ===================== */
+/* Estilos para pantallas pequeñas (<=690px) */
 @media (max-width: 690px) {
-    .private__layout {
-        grid-template-rows: auto auto auto;
-        grid-template-areas:
-            "nav"
-            "content"
-            "aside"; /* Mueve el aside debajo del contenido */
-    }
-
-    .layout__navbar {
-        flex-direction: column;
-        align-items: stretch; /* Alineación para que ocupe todo el ancho */
-        min-height: auto;
-        padding: 1rem 1rem;
-        width: 100%; /* Asegura que ocupe todo el ancho */
-        background-color: #3785e5; /* Color de fondo */
-    }
-
-    .navbar__title {
-        display: block;
-        font-size: 1.5rem; /* Tamaño de fuente */
-        margin-bottom: 1rem; /* Espaciado debajo del título */
-    }
-
-    .navbar__container-lists {
-        width: 100%;
-        flex-direction: column;
-        padding: 0;
-    }
-
+    /* Ocultar todos los enlaces de navegación por defecto */
     .container-lists__menu-list {
-        flex-direction: column;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 5.3rem; /* Posicionar el menú debajo de la barra */
+    left: 0;
+    background-color: #3785e5;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
-
-    .container-lists__list-end {
-        flex-direction: column;
-        align-items: normal;
-        margin-top: 5rem;
-    }
-
-    .menu-list__item {
-        width: 100%;
-    }
-
-    .menu-list__link {
-        display: block;
-        padding: 0.5rem; /* Ajuste de padding */
-        text-align: center; /* Centrar texto */
-    }
-
-    /* Ocultar todos los botones menos el de cerrar sesión */
-    .menu-list__link:not(.logout-link) {
-        display: none; /* Esconder enlaces que no son de cerrar sesión */
-    }
-
-    .logout-link {
-        display: block; /* Asegurar que el enlace de cerrar sesión esté visible */
-        padding: 1rem; /* Padding para el enlace de cerrar sesión */
-        text-align: center; /* Centrar texto */
-        background-color: #ff4d4d; /* Color de fondo para cerrar sesión */
-        color: white; /* Color de texto */
-        border-radius: 0.4rem; /* Bordes redondeados */
-    }
-
-    .aside__container {
+    
+    /* Mostrar el menú cuando el estado isMenuOpen es true */
+    .container-lists__menu-list.show {
         display: flex;
-        flex-direction: column; /* Asegurar que el sidebar sea vertical */
     }
 
-    .layout__aside {
-        margin: 0; /* Elimina margen para evitar solapamiento */
-        padding: 1rem; /* Agrega un poco de padding */
-        border: none; /* Opcional: Eliminar bordes en móviles */
-        width: 100%; /* Asegura que el sidebar ocupe todo el ancho */
+    /* Mostrar el botón hamburguesa solo en pantallas pequeñas */
+    .navbar-toggler {
+      display: flex;
     }
-
-    /* Otros ajustes según sea necesario */
-}
+  
+    /* Estilo para los elementos del menú */
+    .menu-list__item {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .menu-list__link {
+      display: block;
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    /* Ocultar el logo o título en pantallas pequeñas */
+    .navbar__title {
+      display: block;
+      margin-right: auto;
+    }
+  }
 
 @media (max-width: 447px) {
     .profile-info__stats {

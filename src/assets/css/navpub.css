@@ -1,0 +1,47 @@
+/* --------- */
+/* NavPub Section  */
+/* --------- */
+
+
+
+/* ESTILOS PARA LA BARRA DE NAVEGACIÓN PÚBLICA */
+
+/* Lista de menú pública */
+.public-menu__list {
+    display: flex; /* Usa flexbox para alinear los elementos */
+    justify-content: flex-end; /* Alinea los elementos al final de la barra */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+/* Estilo para los elementos de la lista de menú pública */
+.public-menu__item {
+    list-style: none; /* Elimina el estilo de lista */
+    margin-left: 1rem; /* Espacio entre los elementos */
+}
+
+/* Estilo para los enlaces en el menú público */
+.public-menu__link {
+    padding: 1.8rem; /* Espaciado interno */
+    transition: background-color 0.3s ease, transform 0.2s; /* Efectos de transición */
+    border-radius: 0.5rem; /* Esquinas redondeadas */
+    color: white; /* Color del texto */
+}
+
+/* Color de fondo al pasar el mouse en la barra pública */
+.public-menu__link:hover {
+    background-color: #1756cc; /* Color al pasar el mouse */
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+/* Color al enfocar el enlace en la barra pública */
+.public-menu__link:focus {
+    outline: none; /* Eliminar borde por defecto al enfocar */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo translúcido al enfocar */
+    color: #e0e0e0; /* Color del texto al enfocar */
+}
+
+/* Estilo para el título de los enlaces en el menú público */
+.public-menu__title {
+    padding: 0.5rem; /* Espaciado interno */
+    font-size: 1.6rem; /* Tamaño de fuente */
+}
